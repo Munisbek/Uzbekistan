@@ -1,0 +1,39 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="@routes.Application.index()"><img src="@routes.Assets.at("images/flagnav.jpg")" width="120px" alt="logo"></a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li><a href="http://pogoda.uz">Погода</a></li>
+        <li><a href="http://daryo.uz">Новости</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Области <i class="fa fa-angle-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="@routes.Application.andijon()">Андижанская область</a></li>
+            <li><a href="#">Бухарская область</a></li>
+            <li><a href="#">Джизакская область</a></li>
+            <li><a href="#">Кашкадарьинская обл..</a></li>
+            <li><a href="#">Навоийская область</a></li>
+            <li><a href="#">Наманганская область</a></li>
+            <li><a href="#">Самаркандская область</a></li>
+            <li><a href="#">Сурхандарьинская обл..</a></li>
+            <li><a href="#">Сырдарьинская область</a></li>
+            <li><a href="#">Ташкентская область</a></li>
+            <li><a href="#">Ферганская область</a></li>
+            <li><a href="#">Хорезмская область</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/uzbekistan">Место нахождения на карте мира</a></li>
+
+      </ul>
+    </div>
+  </div><!--/.container-->
+</nav><!--/nav-->
