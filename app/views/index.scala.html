@@ -1,11 +1,10 @@
 @(message: String)
-
+<body class="body">
 @main("Uzbekistan") {
 
     @navbar()
     <br><br><br>
-
-
+    <div class="main-bg">
     <div class="container">
         <div class="jumbotron">
             <h1>Жемчужина Средней Азии</h1>
@@ -14,10 +13,9 @@
             </p>
         </div>
         @carousel()
-
-
+        <br><br>
         <div class="accordion">
-            <h2>Государственные символы</h2>
+            <h2 class="text-center text-danger">Государственные символы</h2>
             <div class="panel-group" id="accordion1">
                 <div class="panel panel-default">
                     <div class="panel-heading active">
@@ -123,20 +121,23 @@
                                         Улуг халк кудрати жуш урган замон,<br>
                                         Оламни махлиё айлаган диёр!<br></b>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/#accordion1-->
             </div>
-<br> <br><br>
-        <h1 class="">Становление государственности</h1>
-            <div class="row">
+<br><br><br>
 
-                <div class="col-xs-2">
-                    <img class="img-responsive" src="@routes.Assets.at("images/prezident.jpg")" >
+            <div class="row">
+                <h1 class="text-center">Становление государственности</h1>
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="@routes.Assets.at("images/prezident.jpg")" style="height: 180px; width: 270px" ><br>
+                    <img class="img-responsive" src="@routes.Assets.at("images/3v1.jpg")" style="height: 180px; width: 270px" ><br>
+                    <img class="img-responsive" src="@routes.Assets.at("images/everest.jpg")" style="height: 180px; width: 270px">
                 </div>
-                <div class="col-xs-7">
+                <div class="col-xs-6">
 
 
                     <b>21 октября 1989 г. — принят закон о государственном языке республики Узбекистан<br>
@@ -154,11 +155,17 @@
                         1 июля 1994 г. — введена национальная валюта<br>
                         Согласно конституции Узбекистан — правовое демократическое государство. Глава государства — президент. Высшим государственным представительным органом является Олий Мажлис республики Узбекистан, осуществляющий законодательную власть. Олий Мажлис республики Узбекистан состоит из двух палат — законодательной палаты (нижняя палата) и Сената (верхняя палата) (Конституция республики Узбекистан, гл. 18, ст. 76). органом исполнительной власти Республики Узбекистан, обеспечивающим руководство эффективного функционирования экономики, социальной и духовной сферы, исполнение законов, иных решений Олий Мажлиса, Указов и распоряжений Президента Республики Узбекистан является Кабинет Министров Республики Узбекистан</b>
                 </div>
-                <div class="col-lg-3">
-                    <img class="img-responsive" src="@routes.Assets.at("images/parlament.jpg")" >
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="@routes.Assets.at("images/parlament.jpg")" style="height: 180px; width: 270px"> <br>
+                    <img class="img-responsive" src="@routes.Assets.at("images/putin.jpg")"  style="height: 180px; width: 270px" ><br>
+                    <img class="img-responsive" src="@routes.Assets.at("images/nbu.jpg")" style="height: 180px; width: 270px" >
                 </div>
             </div>
+
     </div>
+    </div>
+    <br><br>
 @footer()
 
 }
+</body>
