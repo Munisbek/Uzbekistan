@@ -45,4 +45,10 @@ object Application extends Controller {
   def khorezm = Action{
     Ok(views.html.khorezm())
   }
+  def karakalpakistan = Action{
+    Ok(views.html.karakalpakistan())
+  }
+  def munis = Action{
+    Ok(views.html.munis())
+  }
 }
