@@ -188,7 +188,6 @@ body > section {
   border-bottom: 1px solid #222;
   line-height: 28px;
 }
-
 .top-number{
   color: #fff;
 }
@@ -1521,7 +1520,7 @@ ul.social_icons li  a i{
 }
 
 .footer {
-  background: none repeat scroll 0 0 #2E2E2E;
+  background: none repeat scroll 0 0 #000000;
   border-top: 5px solid #C52D2F;
   height: 84px;
   margin-top: 110px;

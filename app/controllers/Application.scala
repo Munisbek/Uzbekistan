@@ -3,6 +3,7 @@ package controllers
 import play.api._
 import play.api.mvc._
 
+
 object Application extends Controller {
 
   def index = Action {
@@ -51,4 +52,5 @@ object Application extends Controller {
   def munis = Action{
     Ok(views.html.munis())
   }
+
 }
