@@ -10,3 +10,6 @@
 .search-form{
     text-align: center;
 }
+.body {
+    background: url(/public/images/header-bg.jpg) no-repeat center center fixed;
+}

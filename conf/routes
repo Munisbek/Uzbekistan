@@ -5,9 +5,9 @@
 # Home page
 GET        /                         controllers.Application.index
 
-
-GET        /region/list              @controllers.Regions.list
-GET        /region/:id/remove        @controllers.Regions.remove(id: Int)
+#
+#GET        /region/list              @controllers.Regions.list
+#GET        /region/:id/remove        @controllers.Regions.remove(id: Int)
 
 GET        /andijon                  controllers.Application.andijon
 GET        /bukhara                  controllers.Application.bukhara

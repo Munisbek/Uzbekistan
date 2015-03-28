@@ -52,5 +52,4 @@ object Application extends Controller {
   def munis = Action{
     Ok(views.html.munis())
   }
-
 }
