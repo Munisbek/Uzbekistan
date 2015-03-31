@@ -1,37 +1,37 @@
-@(regions: List[Region])
+@*@(regions: List[Region])*@
 
-@main("Uzbekistan") {
+@*@main("Uzbekistan") {*@
 
-  @navbar()
+  @*@navbar()*@
 
-  <div class="container main-content">
+  @*<div class="container main-content">*@
 
-    <h1 class="text-center">World's most beautiful cities.</h1>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Country</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-      @for(region <- regions) {
-        <tr>
-          <td>@region.name</td>
-          <td>@region.population</td>
-          <td>@region.description</td>
+    @*<h1 class="text-center">World's most beautiful cities.</h1>*@
+    @*<table class="table table-striped">*@
+      @*<thead>*@
+        @*<tr>*@
+          @*<th>Name</th>*@
+          @*<th>Description</th>*@
+          @*<th>Country</th>*@
+          @*<th>Action</th>*@
+        @*</tr>*@
+      @*</thead>*@
+      @*<tbody>*@
+      @*@for(region <- regions) {*@
+        @*<tr>*@
+          @*<td>@region.name</td>*@
+          @*<td>@region.population</td>*@
+          @*<td>@region.description</td>*@
 
-          <td>
-            <a href="@routes.Regions.remove(region.id.get)">
-              <button class="btn btn-danger">Delete</button>
-            </a>
-          </td>
-        </tr>
-      }
-      </tbody>
-    </table>
-  </div>
+          @*<td>*@
+            @*<a href="@routes.Regions.remove(region.id.get)">*@
+              @*<button class="btn btn-danger">Delete</button>*@
+            @*</a>*@
+          @*</td>*@
+        @*</tr>*@
+      @*}*@
+      @*</tbody>*@
+    @*</table>*@
+  @*</div>*@
 
-}
+@*}*@
