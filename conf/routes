@@ -5,9 +5,8 @@
 # Home page
 GET        /                         controllers.Application.index
 
-#
-#GET        /region/list              @controllers.Regions.list
-#GET        /region/:id/remove        @controllers.Regions.remove(id: Int)
+
+
 
 GET        /andijon                  controllers.Application.andijon
 GET        /bukhara                  controllers.Application.bukhara
@@ -22,11 +21,11 @@ GET        /tashkent                 controllers.Application.tashkent
 GET        /farghana                 controllers.Application.farghana
 GET        /khorezm                  controllers.Application.khorezm
 GET        /karakalpakistan          controllers.Application.karakalpakistan
-
-
 GET        /munis                    controllers.Application.munis
+
+GET        /regions/list              @controllers.Regions.list
+GET        /region/:id/remove        @controllers.Regions.remove(id: Int)
 
 # Map static resources from the /public folder to the /assets URL path
 GET        /assets/*file             controllers.Assets.at(path="/public", file)
 
-    

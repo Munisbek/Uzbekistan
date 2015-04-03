@@ -52,4 +52,8 @@ object Application extends Controller {
   def munis = Action{
     Ok(views.html.munis())
   }
+
+//  def list = Action{
+//    Ok(views.html.list("Region"))
+//  }
 }

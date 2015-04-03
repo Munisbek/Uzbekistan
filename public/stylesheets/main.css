@@ -1,15 +1,27 @@
 .local_time {
-    color: white;
+    color: #46cfd4;
     font-size: 24px;
     padding: 16px;
 
 }
+
 .fa-search{
-    color: #352cf1
+     color: #46cfd4;
+ }
+.fa-search:hover{
+    color: #ffffff;
+    font-size: 18px;
 }
 .search-form{
     text-align: center;
 }
 .body {
     background: url(/public/images/header-bg.jpg) no-repeat center center fixed;
+}
+
+.local_date{
+    color: #46cfd4;
+    font-size: 24px;
+    padding: 16px;
+
 }
