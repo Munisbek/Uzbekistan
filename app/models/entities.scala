@@ -8,7 +8,7 @@ case class Region(id: Option[Int],
 
                 name: String,
                 population: String,
-                description: String)
+                center: String)
 
 
 class  RegionsTable(tag: Tag) extends Table[Region](tag, "REGION") {
@@ -19,8 +19,8 @@ class  RegionsTable(tag: Tag) extends Table[Region](tag, "REGION") {
 
   def population  = column[String]("POPULATION", O.Default(""))
 
-  def description = column[String]("DESCRIPTION", O.Default(""))
+  def center = column[String]("CENTER", O.Default(""))
 
-  def * = (id.?, name, population, description) <> (Region.tupled, Region.unapply _)
+  def * = (id.?, name, population, center) <> (Region.tupled, Region.unapply _)
 
 }
