@@ -22,13 +22,8 @@ class Regions extends  Controller {
     Ok(views.html.list(region.list))
   }
 
-
-  def remove(id: Int) = DBAction { implicit request =>
-    region.filter(_.id === id).delete;
-    Redirect(routes.Regions.list())
-  }
-
-
 }
+
+
 
 

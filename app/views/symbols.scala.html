@@ -1,0 +1,29 @@
+@(symbols: List[Symbol])
+
+@main("Uzbekistan") {
+
+  @navbar()
+
+  <br><br><br><br><br>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Символы</th>
+          <th>Дате принятии</th>
+        </tr>
+      </thead>
+      <tbody>
+      @for(symbol <- symbols) {
+        <tr>
+          <td>@symbol.name</td>
+          <td>@symbol.date</td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+
+}
+<br><br><br>
+@footer()
