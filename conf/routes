@@ -27,7 +27,7 @@ GET         /commits                  @controllers.Comments.showAddForm
 
 POST        /commits                  @controllers.Comments.add
 GET         /Commit/:id/delete        @controllers.Comments.remove(id:Int)
-GET         /CommitsList               @controllers.Comments.commitsList
+GET         /commitsList               @controllers.Comments.commitsList
 
 
 
