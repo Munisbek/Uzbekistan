@@ -24,18 +24,22 @@ class RegionsTable(tag: Tag) extends Table[Region](tag, "REGION") {
 
 }
 
-case class Symbol(id: Option[Int],
-                   name: String,
-                   date: String)
 
-class SymbolTable(tag: Tag) extends Table[Symbol](tag, "SYMBOL") {
+
+
+case class Commit(id: Option[Int],
+                  name: String,
+                  comments: String)
+
+class CommitTable(tag: Tag) extends Table[Commit](tag, "CommitTable") {
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
 
   def name = column[String]("NAME", O.Default(""))
 
-  def date = column[String]("DATE", O.Default(""))
+  def comments = column[String]("COMMENTS", O.Default(""))
 
-  def * = (id.?, name, date) <> (Symbol.tupled, Symbol.unapply _)
+  def * = (id.?, name, comments) <>(Commit.tupled, Commit.unapply _)
 
 }
+

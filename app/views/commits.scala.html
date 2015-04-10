@@ -1,0 +1,26 @@
+@()
+@main("Uzbekistan"){
+  @navbar()
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container main-content">
+
+    <form  class="@routes.Comments.add()" method="post">
+      <h1 class="text-center text-success">Оставте свое мнения</h1>
+      <div class="form-group">
+        <label for="inp-text">Name</label>
+        <textarea type="textarea" class="form-control" id="inp-text"
+        name="NAME" required=""></textarea>
+    <br><br>
+        <label for="inp-text">Comments</label>
+        <textarea type="textarea" class="form-control" id="inp-text"
+        name="COMMENTS" required=""></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+  </div>
+}

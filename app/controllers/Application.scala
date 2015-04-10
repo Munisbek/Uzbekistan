@@ -1,7 +1,8 @@
 package controllers
 
-import play.api._
+
 import play.api.mvc._
+
 
 
 object Application extends Controller {
@@ -53,7 +54,6 @@ object Application extends Controller {
     Ok(views.html.munis())
   }
 
-//  def list = Action{
-//    Ok(views.html.list("Region"))
-//  }
+
+
 }
