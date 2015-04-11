@@ -35,9 +35,6 @@ class Comments extends Controller {
   }
 
 
-  def remove(id: Int) = DBAction { implicit request =>
-    commit.filter(_.id === id). delete;
-    Redirect(routes.Comments.commitsList())
-  }
+
 
 }
