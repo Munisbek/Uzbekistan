@@ -1,0 +1,38 @@
+@(countries: List[Country])
+
+@main("Uzbekistan") {
+
+  @navbar()
+
+  <div class="container main-content">
+
+    <h1 class="text-center">World's most beautiful countries.</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Области</th>
+          <th>Редактировать</th>
+        </tr>
+
+      </thead>
+      <tbody>
+      @for(country<- countries) {
+        <tr>
+          <td>@country.name</td>
+
+
+          <td>
+            <a href="@routes.Countries.showEditForm(country.id.get)">
+              <button class="btn btn-warning">Edit</button>
+            </a>
+            <a href="@routes.Countries.remove(country.id.get)">
+              <button class="btn btn-danger">Delete</button>
+            </a>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+
+}

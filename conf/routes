@@ -3,39 +3,52 @@
 # ~~~~
 
 # Home page
-GET         /                         controllers.Application.index
+GET         /                          controllers.Application.index
 
 
 
 
-GET         /andijon                  controllers.Application.andijon
-GET         /bukhara                  controllers.Application.bukhara
-GET         /jizzax                   controllers.Application.jizzax
-GET         /qashqadaryo              controllers.Application.qashqadaryo
-GET         /navoiy                   controllers.Application.navoiy
-GET         /namangan                 controllers.Application.namangan
-GET         /samarqand                controllers.Application.samarqand
-GET         /surxondaryo              controllers.Application.surxondaryo
-GET         /sirdaryo                 controllers.Application.sirdaryo
-GET         /tashkent                 controllers.Application.tashkent
-GET         /farghana                 controllers.Application.farghana
-GET         /khorezm                  controllers.Application.khorezm
-GET         /karakalpakistan          controllers.Application.karakalpakistan
-GET         /munis                    controllers.Application.munis
+GET         /andijon                   controllers.Application.andijon
+GET         /bukhara                   controllers.Application.bukhara
+GET         /jizzax                    controllers.Application.jizzax
+GET         /qashqadaryo               controllers.Application.qashqadaryo
+GET         /navoiy                    controllers.Application.navoiy
+GET         /namangan                  controllers.Application.namangan
+GET         /samarqand                 controllers.Application.samarqand
+GET         /surxondaryo               controllers.Application.surxondaryo
+GET         /sirdaryo                  controllers.Application.sirdaryo
+GET         /tashkent                  controllers.Application.tashkent
+GET         /farghana                  controllers.Application.farghana
+GET         /khorezm                   controllers.Application.khorezm
+GET         /karakalpakistan           controllers.Application.karakalpakistan
+GET         /munis                     controllers.Application.munis
+#
+#GET         /commits                   @controllers.Comments.showAddForm
+#POST        /commits                   @controllers.Comments.add
+#GET         /commitsList               @controllers.Comments.commitsList
+#GET         /region/list               @controllers.Regions.list
+#GET         /commit/list             @controllers.Comments.list
+#GET         /commits/:id/remove        @controllers.Comments.remove(id: Int )
 
-GET         /commits                  @controllers.Comments.showAddForm
-
-POST        /commits                  @controllers.Comments.add
-
-GET         /commitsList               @controllers.Comments.commitsList
 
 
+GET         /cities/new              @controllers.Cities.showAddForm
+POST        /cities/new              @controllers.Cities.add
+GET         /cities/list             @controllers.Cities.list
+GET         /city/:id/remove         @controllers.Cities.remove(id: Int)
+POST        /city/:id/edit           @controllers.Cities.update(id: Int)
+GET         /city/:id/edit           @controllers.Cities.showEditForm(id: Int)
 
+GET         /countries/list          @controllers.Countries.list
+GET         /countries/new           @controllers.Countries.showAddForm
+POST        /countries/new           @controllers.Countries.add
+GET         /country/:id/remove      @controllers.Countries.remove(id: Int)
+POST        /country/:id/edit        @controllers.Countries.update(id: Int)
+GET         /country/:id/edit        @controllers.Countries.showEditForm(id: Int)
 
-GET         /regions/list             @controllers.Regions.list
 
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file             controllers.Assets.at(path="/public", file)
+GET         /assets/*file              controllers.Assets.at(path="/public", file)
 

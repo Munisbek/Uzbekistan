@@ -1,24 +1,35 @@
-@(regions: List[Region])
+@(cities: List[CityForDisplay])
 
 @main("Uzbekistan") {
 
   @navbar()
-  <br><br> <br><br> <br><br> <br><br>
+
   <div class="container main-content">
+
+    <h1 class="text-center">World's most beautiful cities.</h1>
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Область:</th>
-          <th>Численность населения:</th>
-          <th>Административный центр:</th>
+          <th>Город</th>
+          <th>Описания</th>
+          <th>Область</th>
+          <th>Действия</th>
         </tr>
       </thead>
       <tbody>
-      @for(region <- regions) {
+      @for(cityObj <- cities) {
         <tr>
-          <td>@region.name</td>
-          <td>@region.population</td>
-          <td>@region.center</td>
+          <td>@cityObj.city.name</td>
+          <td>@cityObj.city.description</td>
+          <td>@cityObj.countryName</td>
+          <td>
+            <a href="@routes.Cities.showEditForm(cityObj.city.id.get)">
+              <button class="btn btn-warning">Edit</button>
+            </a>
+            <a href="@routes.Cities.remove(cityObj.city.id.get)">
+              <button class="btn btn-danger">Delete</button>
+            </a>
+          </td>
         </tr>
       }
       </tbody>
@@ -26,5 +37,3 @@
   </div>
 
 }
-<br><br><br>
-@footer()

@@ -1,0 +1,18 @@
+@(country: Country)
+
+@main("Uzbekistan") {
+
+  @navbar()
+<br><br><br>
+  <div class="container main-content">
+    <h2 class="text-center">Edit Region</h2>
+    <form class="@routes.Countries.update(country.id.get)" method="post">
+      <div class="form-group">
+        <label for="inp-name">Region</label>
+        <input type="text" class="form-control" id="inp-name"
+        name="name" value="@country.name" required="">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+}

@@ -12,13 +12,10 @@
     color: #ffffff;
     font-size: 18px;
 }
+
 .search-form{
     text-align: center;
 }
-.body {
-    background: url(/public/images/header-bg.jpg) no-repeat center center fixed;
-}
-
 .local_date{
     color: #46cfd4;
     font-size: 24px;

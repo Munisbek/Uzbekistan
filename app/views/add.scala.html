@@ -1,0 +1,33 @@
+@(countries: List[Country])
+
+@main("Uzbekistan") {
+
+  @navbar()
+  <br><br><br>
+  <div class="container main-content">
+    <h2 class="text-center">Добавите город принадлежащий этому областью</h2>
+    <form class="@routes.Cities.add()" method="post">
+      <div class="form-group">
+        <label for="inp-name">Город</label>
+        <input type="text" class="form-control" id="inp-name"
+        name="name" required="">
+      </div>
+      <div class="form-group">
+        <label for="inp-desc">Описания</label>
+        <textarea type="text" class="form-control" id="inp-desc"
+        name="description" required=""></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="inp-country">Область</label>
+        <select name="country" class="form-control" id="inp-country">
+        @for(country <- countries) {
+          <option value="@country.id">@country.name</option>
+        }
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+}
