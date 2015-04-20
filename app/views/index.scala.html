@@ -9,12 +9,29 @@
         <p class="lead">
             Узбекистана - это своеобразное собрание удивительных и знаменательных фактов из жизни людей, которые начали писать историю этого края с таких давних пор, что полет фантазии современного человека способен даже затеряться в безграничном пространстве времени. Все, что пережил Узбекистан за эти долгие тысячелетия вряд ли можно уместить на страницах толстых учебников или пособий, ведь жизнь человека, его достижения, успехи, страдания и горести не всегда поддаются точному описанию, а если кто-то и пытается это сделать, то им становится профессиональный писатель, который способен прочувствовать все, что может хоть каким-то образом коснуться его героя. Но история и историки - это совсем другое. Они лишь констатируют факты и описывают события. А для полноценной передачи информации об описываемом ими времени этого мало. Однако следует признать, что история - это наука о фактах и спорить с этим определением не имеет смысла. Но даже несмотря на это, события, происходившие на территории Узбекистана настолько интересны, что порой излишние слова могут только усугубить представление читателя о прошлом.
         </p>
-        @*<a href="@routes.Comments.showAddForm()"><button type="button" class="btn btn-success">Оставьте свои комментарии</button>*@
-        @*<a href="@routes.Comments.commitsList()"><button type="button" class="btn btn-success pull-right">Коментарии</button>*@
-        <a href="@routes.Countries.add()"><button type="button" class="btn btn-success">Добавте Область</button>
-        <a href="@routes.Countries.list()"><button type="button" class="btn btn-success pull-right">Редак...Область</button><br>
-            <a href="@routes.Cities.list()"><button type="button" class="btn btn-success pull-right">Редак... Город</button>
-        <a href="@routes.Cities.add()"><button type="button" class="btn btn-success ">Добавте Город</button>
+        <div class="row">
+
+            <div class="col-xs-6">
+
+                <a href="@routes.Comments.showAddForm()"><button type="button" class="btn btn-link btn-lg "> Оставьте свои комментарии</button>
+
+                        <a href="@routes.Cities.add()"><button type="button" class="btn btn-link btn-lg "> Добавте Город</button>
+
+                        <a href="@routes.Countries.add()"><button type="button" class="btn btn-link btn-lg "> Добавте Область</button>
+            </div>
+
+        <div class="col-xs-6">
+
+            <a href="@routes.Comments.commitsList()"><button type="button" class="btn btn-link btn-lg pull-right"> Коментарии</button>
+
+                <a href="@routes.Countries.list()"><button type="button" class="btn btn-link btn-lg pull-right">  Редак...Область</button>
+
+                <a href="@routes.Cities.list()"><button type="button" class="btn btn-link btn-lg pull-right"> Редак... Город</button>
+        </div>
+        </div>
+
+
+
 
     </div>
     <div class="container">
@@ -24,7 +41,7 @@
         <br> <br>
 
         <div class="accordion">
-            <h2 class="text-center text-danger">Государственные символы</h2>
+            <h2 class="text-center text-danger"> Государственные символы</h2>
             <div class="panel-group" id="accordion1">
                 <div class="panel panel-default">
                     <div class="panel-heading active">
@@ -170,7 +187,11 @@
                 <img class="img-responsive" src="@routes.Assets.at("images/nbu.jpg")" style="height : 180px ; width : 270px" >
             </div>
         </div>
+        <br><br><br>
 
+
+
+        <br><br><br>
     </div>
 
     @footer()

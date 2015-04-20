@@ -2,7 +2,7 @@ package models
 
 
 import play.api.db.slick.Config.driver.simple._
-//
+
 //case class Region(id: Option[Int],
 //
 //                  name: String,
@@ -23,24 +23,24 @@ import play.api.db.slick.Config.driver.simple._
 //  def * = (id.?, name, population, center) <>(Region.tupled, Region.unapply _)
 //
 //}
-//
-//case class Commit(id: Option[Int],
-//                  name: String,
-//                  comments: String
-//                 )
-//
-//class CommitTable(tag: Tag) extends Table[Commit](tag, "CommitTable") {
-//
-//  def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
-//
-//  def name = column[String]("NAME", O.Default(""))
-//
-//  def comments = column[String]("COMMENTS", O.Default(""))
-//
-//
-//  def * = (id.?, name, comments) <>(Commit.tupled, Commit.unapply _)
 
-//}
+case class Commit(id: Option[Int],
+                  name: String,
+                  comments: String
+                 )
+
+class CommitTable(tag: Tag) extends Table[Commit](tag, "CommitTable") {
+
+  def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
+
+  def name = column[String]("NAME", O.Default(""))
+
+  def comments = column[String]("COMMENTS", O.Default(""))
+
+
+  def * = (id.?, name, comments) <>(Commit.tupled, Commit.unapply _)
+
+}
 case class City(id: Option[Int],
                 name: String,
                 description: String,

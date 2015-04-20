@@ -23,12 +23,12 @@ GET         /khorezm                   controllers.Application.khorezm
 GET         /karakalpakistan           controllers.Application.karakalpakistan
 GET         /munis                     controllers.Application.munis
 #
-#GET         /commits                   @controllers.Comments.showAddForm
-#POST        /commits                   @controllers.Comments.add
-#GET         /commitsList               @controllers.Comments.commitsList
-#GET         /region/list               @controllers.Regions.list
-#GET         /commit/list             @controllers.Comments.list
-#GET         /commits/:id/remove        @controllers.Comments.remove(id: Int )
+GET         /commits                   @controllers.Comments.showAddForm
+POST        /commits                   @controllers.Comments.add
+GET         /list               @controllers.Comments.commitsList
+
+
+GET         /commits/:id/remove        @controllers.Comments.remove(id: Int )
 
 
 

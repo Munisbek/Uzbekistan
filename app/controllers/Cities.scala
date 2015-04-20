@@ -17,7 +17,7 @@ class Cities extends Controller {
     //    Logger.info(s"SHOW_ALL = ${cities.list}")
     val cityResult = (for {
       (city, country) <- cities leftJoin commit on (_.countryId === _.id)
-    } yield (city, country.name)).list
+      } yield (city, country.name)).list
       .map { case (city, countryName) => CityForDisplay(city, countryName)}
 
     Ok(views.html.list(cityResult))
