@@ -10,7 +10,7 @@ import play.api.db.slick.Config.driver.simple._
 //                  center: String)
 //
 //
-//class RegionsTable(tag: Tag) extends Table[Region](tag, "REGION") {
+//  class RegionsTable(tag: Tag) extends Table[Region](tag, "REGION") {
 //
 //  def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
 //

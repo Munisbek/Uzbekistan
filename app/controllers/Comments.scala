@@ -38,4 +38,5 @@ class Comments extends Controller {
     commit.filter(_.id === id). delete;
     Redirect(routes.Comments.commitsList())
   }
+
 }

@@ -15,18 +15,18 @@
       <div class="form-group">
         <label for="inp-desc">Описания</label>
         <textarea type="text" class="form-control" id="inp-desc"
-        name="description" required="">@city.description</textarea>
+        name="description" required=""> @city.description</textarea>
       </div>
       <div class="form-group">
         <label for="inp-country">Область</label>
         <select name="country" class="form-control" id="inp-country">
         @for(country <- countries) {
-          <option value="@country.id">@country.name</option>
+          <option value="@country.id"> @country.name</option>
         }
         </select>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary"> Submit</button>
     </form>
   </div>
 }

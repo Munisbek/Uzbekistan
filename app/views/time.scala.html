@@ -5,8 +5,8 @@
     <title>Local Time</title>
   </head>
   <body>
-    <div id="clock" class="pull-right local_time"></div>
-    <div id="date"  class="pull-left local_date"></div>
+    <div id="clock" class="digiclock fixed"></div>
+    <div id="date" class="local_time fixed"></div>
     <script>
     function setTime()
     {
@@ -17,7 +17,7 @@
 
     var date =  new Date();
     document.getElementById('clock').innerHTML =date.toLocaleTimeString();
-    document.getElementById('date').innerHTML =date.toLocaleDateString();
+document.getElementById('date' ).innerHTML=date.toLocaleDateString();
     setTime();
 
     }
